@@ -8,12 +8,14 @@ var attacking : bool = false
 @onready var run: State = $"../run"
 
 @onready var attack_hurt_box: HurtBox = %AttackHurtBox
+@onready var sword_slash_sound: AudioStreamPlayer = $"../../SwordSlashSound"
 
 
 
 ## Enter state
 func Enter() -> void:
 	player.UpdateAnimation("attack")
+	sword_slash_sound.play();
 	animation_player.animation_finished.connect( EndAttack )
 	attacking = true
 	

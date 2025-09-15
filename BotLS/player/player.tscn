@@ -1,8 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://h0vukib818br"]
+[gd_scene load_steps=26 format=3 uid="uid://h0vukib818br"]
 
 [ext_resource type="Script" uid="uid://bwwfp8kwesr38" path="res://Scripts/player.gd" id="1_rkbax"]
 [ext_resource type="Script" uid="uid://crlo8vt65f4kh" path="res://Scripts/state_attack.gd" id="6_g6k8r"]
 [ext_resource type="PackedScene" uid="uid://jlidcrs5o30r" path="res://GeneralNodes/HurtBox/hurt-box.tscn" id="7_boad6"]
+[ext_resource type="AudioStream" uid="uid://bjml45tjvnlwv" path="res://Audio/SFX/Sword_slash_sound.mp3" id="8_rgyib"]
 [ext_resource type="Script" uid="uid://dqrw7e6ypmffw" path="res://Scripts/player_state_machine.gd" id="10_ebec5"]
 [ext_resource type="Script" uid="uid://brk7f6hi7fubo" path="res://Scripts/state_idle.gd" id="11_yllr7"]
 [ext_resource type="Script" uid="uid://xvqoajqqfvgu" path="res://Scripts/state_run.gd" id="12_kb6p2"]
@@ -218,7 +219,7 @@ tracks/2/keys = {
 [sub_resource type="Animation" id="Animation_yw30f"]
 resource_name = "idle_down"
 length = 0.7
-loop_mode = 1
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -418,3 +419,6 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_rgyib")
 one_way_collision_margin = 0.0
 debug_color = Color(0.973448, 0, 0.433917, 0.42)
+
+[node name="SwordSlashSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_rgyib")
