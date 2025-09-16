@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BotLS"
-run/main_scene="uid://df76h4hhnsjrf"
+run/main_scene="uid://pus3hbuapj64"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

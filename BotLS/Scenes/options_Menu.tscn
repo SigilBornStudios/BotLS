@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://b58ttxoqyqw8p"]
+
+[ext_resource type="Script" uid="uid://k7qnt46jyu5c" path="res://Scenes/options_menu.gd" id="1_w66ld"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w66ld")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="audioButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="mainMenuButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/mainMenuButton" to="." method="_on_main_menu_button_pressed"]
