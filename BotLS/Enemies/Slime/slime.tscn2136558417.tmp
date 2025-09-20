@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dw0pu82uqfama"]
+[gd_scene load_steps=30 format=3 uid="uid://dw0pu82uqfama"]
 
 [ext_resource type="Script" uid="uid://df7wvhoj0fdh3" path="res://Scripts/slime.gd" id="1_t8cwk"]
 [ext_resource type="Texture2D" uid="uid://co2cc8hbxlga4" path="res://Enemies/Slime/Shadow.png" id="1_wwfkb"]
@@ -10,7 +10,6 @@
 [ext_resource type="Script" uid="uid://kgu56hh36fkm" path="res://Scripts/states/enemy_state_stun.gd" id="7_8tnav"]
 [ext_resource type="PackedScene" uid="uid://jlidcrs5o30r" path="res://GeneralNodes/HurtBox/hurt-box.tscn" id="7_jlwhn"]
 [ext_resource type="Texture2D" uid="uid://d0dbc38jsb307" path="res://Enemies/Slime/DestroySmoke.png" id="8_n8fnr"]
-[ext_resource type="Script" uid="uid://6jkhmlm0lwbf" path="res://Scripts/states/enemy_state_destroy.gd" id="10_pydiu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n8fnr"]
 radius = 13.0
@@ -635,12 +634,10 @@ after_idle_state = NodePath("../wander")
 script = ExtResource("6_pg00x")
 next_state = NodePath("../idle")
 
-[node name="stun" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state")]
+[node name="stun" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("7_8tnav")
-next_state = NodePath("../idle")
 
 [node name="destroy" type="Node" parent="EnemyStateMachine"]
-script = ExtResource("10_pydiu")
 
 [node name="DestroySmoke" type="Sprite2D" parent="."]
 visible = false

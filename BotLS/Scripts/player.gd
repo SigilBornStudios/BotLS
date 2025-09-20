@@ -19,6 +19,7 @@ var states = []
 func _ready() -> void:
 	add_to_group("Player")
 	#animation_player.play("idle_down")
+	PlayerManager.player = self
 	state_machine.Initialize(self)
 	pass
 
